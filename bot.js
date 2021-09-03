@@ -21,18 +21,19 @@ function welcome(ctx) {
             reply_markup: {
                 keyboard: [
                     [
-                        { text: '👥 О НАС 👥' }
+                        { text: '👥 BIZ HAQIMIZDA 👥' }
                     ],
                     [
-                        { text: '📕 Магистратура и Бакалавриат 📕' },
-                        { text: '📱НАШИ СОЦИАЛЬНЫЕ СЕТИ📱' },
+                        { text: '📕 Magistratura va bakalavr 📕' },
+                        { text: '📱BIZNING IJTIMOIY TARMOQLAR📱' },
+                        
                     ],
                     [
                         { text: '📞 CALL CENTER 📞' },
-                        { text: '🏢 НАШ АДРЕСС 🏢' },
+                        { text: '🏢 BIZNING MANZIL 🏢' },
                     ],
                     [
-                        { text: '📱 Администратор 📱' },
+                        { text: '📱 Administrator 📱' },
                     ],
 
                 ],
@@ -42,28 +43,28 @@ function welcome(ctx) {
     )
 }
 
-bot.hears('👥 О НАС 👥', ctx => {
+bot.hears('👥 BIZ HAQIMIZDA 👥', ctx => {
    
     // replyWithDocument - document javob qaytarish, source: faylni ozi, filename fayl nomi
     ctx.replyWithDocument({ source: buffer, filename: './university_info.docx' })
 
-    ctx.reply('Здесь вы можете узнать о нас  по подробнее🙂')
+    ctx.reply('Bu erda biz haqimizda koproq malumotga ega bolishingiz mumkin🙂')
 
 })
 
 
 
-bot.hears('📕 Магистратура и Бакалавриат 📕', ctx => {
+bot.hears('📕 Magistratura va bakalavr 📕', ctx => {
     // replyWithDocument - document javob qaytarish, source: faylni ozi, filename fayl nomi
     ctx.replyWithDocument({ source: buffer, filename: './Стоимость контракта.docx' })
 
-    ctx.reply('Вы можете узнать стоимость контракта на этом файле🙂')
+    ctx.reply('Shartnoma narxini ushbu fayldan bilib olishingiz mumkin🙂')
 
 })
 
 
-bot.hears('📱НАШИ СОЦИАЛЬНЫЕ СЕТИ📱', ctx => {
-    ctx.reply('📲  Наш вебсайт: Ieu.edu.ua/uz                                                                                                                📲  Инстаграм: https://www.instagram.com/meu_uz/')
+bot.hears('📱BIZNING IJTIMOIY TARMOQLAR📱', ctx => {
+    ctx.reply('📲  Vebsayt : Ieu.edu.ua/uz                                                                                                                📲  Инстаграм: https://www.instagram.com/meu_uz/')
 
 })
 
@@ -74,13 +75,13 @@ bot.hears('📞 CALL CENTER 📞', ctx => {
 })
 
 
-bot.hears('🏢 НАШ АДРЕСС 🏢', ctx => {
+bot.hears('🏢 BIZNING MANZIL 🏢', ctx => {
     ctx.reply('https://maps.app.goo.gl/w2FrNxaFt28ma7WW9')
 
 })
 
-bot.hears('📱 Администратор 📱', ctx => {
-    ctx.reply('Вопросы администратору: +998900064443')
+bot.hears('📱 Administrator 📱', ctx => {
+    ctx.reply('Administratorga savollar: +998900064443')
 
 })
 
